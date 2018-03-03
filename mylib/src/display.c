@@ -1,14 +1,20 @@
 #include "../include/mylib.h"
-#define clrscr() printf("\e[1;1H\e[2J")
-#include <sys/ioctl.h>
 
 void display()
 {
-//	clrscr();
-	system("clear");
-	printf("\n\n\n\t\tWelcome to mylib, a program that should help you keep track of readings\n\n\
-			- do display all books please press d\n\n\
-			- to add a new book please press n\n\n\
-			- to remove an existing book please press r\n\n\
-			- to quit the program please press q");
+	initscr();
+	noecho();
+	cbreak();
+	char *welcome = "Welcome to my lib, a program to help sorting your books";
+	int y, x;
+	y = LINES/2;
+	x = (COLS-strlen(welcome))/2;
+
+
+	mvprintw(y, x, welcome);
+	mvprintw(++y, x+1, "to display all books please press d");
+	mvprintw(++y, x+1, "to add a new book please press n");
+	mvprintw(++y, x+1, "to remove an existing book please press r");
+	mvprintw(++y, x+1, "to quit the program please press q");
+	endwin();
 }

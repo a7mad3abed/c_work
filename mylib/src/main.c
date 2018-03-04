@@ -31,7 +31,7 @@ int main()
 			case 'q':
 				break;
 			default:
-				mvprintw(LINES-2, COLS, "not a valid option");
+				mvprintw(LINES-2, 0, "not a valid option                             ");
 		}
 	}
 

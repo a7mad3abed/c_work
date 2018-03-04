@@ -1,9 +1,9 @@
 #include "../include/mylib.h"
 
-void disp_all();
-void remove_book();
-void new_book();
-void  display();
+extern void disp_all();
+extern void remove_book();
+extern void new_book();
+extern void  display();
 int c;
 int main()
 {
@@ -30,7 +30,8 @@ int main()
 			case 'q':
 				break;
 			default:
-				mvprintw(LINES-2, 0, "not a valid option                             ");
+				mvprintw(LINES-2, 0, "                                 ");
+				mvprintw(LINES-2, 0, "not a valid option");
 		}
 	}
 

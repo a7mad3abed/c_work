@@ -1,6 +1,8 @@
 #include "../include/mylib.h"
+
 void disp_all()
 {
-	mvprintw(LINES-2, 0, "all displayed                       ");
+	mvprintw(LINES-2, 0, "                                               ");
+	mvprintw(LINES-2, 0, "all displayed");
 
 }
